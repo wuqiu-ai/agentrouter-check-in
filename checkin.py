@@ -90,7 +90,7 @@ async def get_waf_cookies_with_playwright(account_name: str):
 			await page.goto('https://agentrouter.org/login', wait_until='networkidle')
 
 			try:
-				await page.wait_for_function('document.readyState === "complete"', timeout=5000)
+				await page.wait_for_function('document.readyState === "complete"', timeout=50000)
 			except Exception:
 				await page.wait_for_timeout(3000)
 
