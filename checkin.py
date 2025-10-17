@@ -98,7 +98,7 @@ async def get_waf_cookies_with_playwright(account_name: str):
 
 			waf_cookies = {}
 			for cookie in cookies:
-				if cookie['name'] in ['acw_tc', 'cdn_sec_tc', 'acw_sc__v2']:
+				if cookie['name'] in ['acw_tc']:
 					waf_cookies[cookie['name']] = cookie['value']
 
 			print(f'[INFO] {account_name}: Got {len(waf_cookies)} WAF cookies after step 1')
