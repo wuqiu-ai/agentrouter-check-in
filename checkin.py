@@ -103,7 +103,7 @@ async def get_waf_cookies_with_playwright(account_name: str):
 
 			print(f'[INFO] {account_name}: Got {len(waf_cookies)} WAF cookies after step 1')
 
-			required_cookies = ['acw_tc', 'cdn_sec_tc', 'acw_sc__v2']
+			required_cookies = ['acw_tc']
 			missing_cookies = [c for c in required_cookies if c not in waf_cookies]
 
 			if missing_cookies:
