@@ -200,7 +200,7 @@ async def check_in_account(account_info, account_index):
 		checkin_headers = headers.copy()
 		checkin_headers.update({'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest'})
 
-		response = client.post('https://agentrouter.org/api/user/sign_in', headers=checkin_headers, timeout=30)
+		response = client.post('https://agentrouter.org/console/topup', headers=checkin_headers, timeout=90)
 
 		print(f'[RESPONSE] {account_name}: Response status code {response.status_code}')
 
